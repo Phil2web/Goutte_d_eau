@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #d6d9e1;
+}
+
+.gouttes {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goutte {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #c61dff;
+  border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.09),
+    15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  transition: 1.5s ease-in-out;
+}
+
+.goutte:hover {
+  border-radius: 50%;
+  background: transparent;
+}
+
+.goutte::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  opacity: 0.9;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+}
+
+.goutte::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 65px;
+  opacity: 0.8;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+
+.goutte:nth-child(2) {
+  transform: scale(0.5) translate(-200px, 180px);
+  border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+  background: #93ea28;
+}
+
+.goutte:nth-child(2):hover {
+  border-radius: 0%;
+  background: transparent;
+}
+
+.goutte:nth-child(3) {
+  transform: scale(0.5) translate(280px, 10px);
+  border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+  background: #7a65ee;
+}
+
+.goutte:nth-child(3):hover {
+  border-radius: 58% 42% 76% 34% / 87% 10% 90% 43%;
+  background: transparent;
+}
+
+.goutte:nth-child(4) {
+  transform: scale(0.35) translate(120px, -350px);
+  border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+  background: #ec6922;
+}
+
+.goutte:nth-child(4):hover {
+  border-radius: 49% 41% 43% 47% / 67% 57% 43% 33%;
+  background: transparent;
+}
